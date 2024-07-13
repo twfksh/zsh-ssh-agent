@@ -1,6 +1,6 @@
 # zsh-ssh-agent
 
-An utility plugin for managing your `ssh-agent` in `zsh`. This starts `ssh-agent` automatically. After running `zsh-ssh-agent`, you only need to `ssh-add` your keys once. The plugin will handle the rest.
+An utility plugin for managing `ssh-agent` in `zsh`. This plugin automatically starts and manages `ssh-agent` whenever a new ternimal session starts. After running `zsh-ssh-agent`, you only need to `ssh-add` your keys once. The plugin will handle the rest.
 
 ## Usage
 
