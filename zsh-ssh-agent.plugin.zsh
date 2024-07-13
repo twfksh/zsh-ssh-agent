@@ -22,7 +22,7 @@ __ssh_agent_start() {
   source $SSH_ENV > /dev/null
 }
 
-zsh_ssh_agent() {
+zsh-ssh-agent() {
   if [[ -z $SSH_ENV ]]; then
     export SSH_ENV=$HOME/.ssh/env
   fi
