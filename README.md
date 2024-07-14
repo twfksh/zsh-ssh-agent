@@ -35,6 +35,5 @@ AddKeysToAgent yes
 With this option enabled keys used by `ssh` will be automatically added to the `ssh-agent`, no need to call `ssh-add` everytime.
 
 
-## Note
 
-This is a fork of amazing `ivakyb/fish_ssh_agent` that I've been using on fish shell.
+Inspired by `ivakyb/fish_ssh_agent` that I've been using on fish shell.
