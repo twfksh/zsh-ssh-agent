@@ -14,7 +14,7 @@ zsh-ssh-agent
 
 To install `zsh-ssh-agent` using `zap`, a minimal zsh plugin manager, add the following line to your `.zshrc` file:
 ```zsh
-plug 'toufiq7r/zsh-ssh-agent'
+plug 'twfksh/zsh-ssh-agent'
 ```
 
 ### Autostart
