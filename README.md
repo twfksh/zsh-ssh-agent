@@ -1,14 +1,6 @@
 # zsh-ssh-agent
 
-A bloat free utility plugin for managing `ssh-agent` in `zsh`. This plugin automatically starts and manages `ssh-agent` whenever a new ternimal session starts. After running `zsh-ssh-agent`, you only need to `ssh-add` your keys once. The plugin will handle the rest.
-
-### Usage
-
-To use `zsh-ssh-agent`, simply run the following command:
-```zsh
-zsh-ssh-agent
-```
-
+A bloat free utility plugin for managing `ssh-agent` in `zsh`. This plugin automatically starts and manages `ssh-agent` whenever a new ternimal session starts and adds your default SSH keys (`id_rsa`, `id_ed25519`).
 
 ### Installation
 
@@ -32,7 +24,7 @@ For seamless integration with `ssh-agent`, add the following line to `~/.ssh/con
 AddKeysToAgent yes
 ```
 
-With this option enabled keys used by `ssh` will be automatically added to the `ssh-agent`, no need to call `ssh-add` everytime.
+Recommended if you want all keys used by `ssh` to be added automatically.
 
 ### Note
 
