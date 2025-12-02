@@ -34,22 +34,6 @@ __ssh_agent_start() {
   source "$SSH_ENV" >/dev/null
 }
 
-# auto-add default SSH keys (e.g. id_rsa and id_ed25519, most common)
-__ssh_add_keys() {
-  [[ -z "$SSH_AGENT_PID" ]] && return 1
-
-  for key in ~/.ssh/id_rsa ~/.ssh/id_ed25519; do
-    [[ -f "$key" ]] || continue
-    ssh-add -l | grep -q "$(ssh-keygen -lf "$key" | awk '{print $2}')" || ssh-add "$key" >/dev/null 2>&1
-  done
-}
-
-# to manage ssh-agent for zshell(zsh)
-zsh-ssh-agent() {
-  if ! __ssh_agent_started; then
-    __ssh_agent_start
-  fi
-
-  __ssh_add_keys
-}
+# manage ssh-agent 
+__ssh_agent_started || __ssh_agent_start
 
