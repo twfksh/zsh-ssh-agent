@@ -13,7 +13,8 @@ plug 'twfksh/zsh-ssh-agent'
 
 For seamless integration with `ssh-agent`, add the following line to `~/.ssh/config` file:
 ```
-AddKeysToAgent yes
+Host *
+    AddKeysToAgent yes
 ```
 
 Recommended if you want all keys used by `ssh` to be added automatically.
@@ -29,5 +30,4 @@ Host github.com
 
 Each Host entry can have its own key. `AddKeysToAgent yes` ensures that key is automatically loaded when connecting. You can still use the script to auto-load a default set of keys for convenience.
 
----
-Inspired by ivakyb/fish_ssh_agent that I've been using on fish shell.
+Inspired by `ivakyb/fish_ssh_agent` that I've been using on fish shell.
